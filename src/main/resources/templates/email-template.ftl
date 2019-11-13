@@ -271,7 +271,7 @@
                     <td align="center" style="color: #ffffff; font-size: 14px; font-family: 'Questrial', sans-serif; mso-line-height-rule: exactly; line-height: 30px;" class="text_color">
                         <div style="line-height: 30px">
                             <!-- ======= section text ======= -->
-                            powered by NIBSS.
+                            powered by DAVYJONES.
                         </div>
                     </td>
                 </tr>
