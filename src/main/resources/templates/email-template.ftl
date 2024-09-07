@@ -194,7 +194,7 @@
 
                     <td align="center">
                         <a href="" style="display: block; border-style: none !important; border: 0 !important;">
-                            <img width="40" border="0" style="display: block; width: 150px;" src="https://api.elasticemail.com/userfile/2b771bca-e9b7-4d07-aac8-6d0e31224df0/nibss.png" alt="logo"></a></td>
+                            <img width="40" border="0" style="display: block; width: 150px;" src="" alt="logo"></a></td>
                 </tr>
 
                 <tr>
@@ -271,7 +271,7 @@
                     <td align="center" style="color: #ffffff; font-size: 14px; font-family: 'Questrial', sans-serif; mso-line-height-rule: exactly; line-height: 30px;" class="text_color">
                         <div style="line-height: 30px">
                             <!-- ======= section text ======= -->
-                            powered by NIBSS.
+                            powered by DAVYJONES.
                         </div>
                     </td>
                 </tr>
