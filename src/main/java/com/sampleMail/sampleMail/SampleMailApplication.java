@@ -1,18 +1,19 @@
 package com.sampleMail.sampleMail;
 
-import com.sampleMail.sampleMail.service.MailService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+import org.apache.catalina.Context;
+import org.apache.catalina.connector.Connector;
+import org.apache.tomcat.util.descriptor.web.SecurityCollection;
+import org.apache.tomcat.util.descriptor.web.SecurityConstraint;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+import org.springframework.context.annotation.Bean;
+
 
 
 @SpringBootApplication
-public class SampleMailApplication implements CommandLineRunner {
-
-
-	@Autowired
-	MailService mailService;
+public class SampleMailApplication  {
 
 
 	public static void main(String[] args) {
@@ -20,32 +21,36 @@ public class SampleMailApplication implements CommandLineRunner {
 	}
 
 
-	@Override
-	public void run(String... args) throws Exception {
+//	@Bean
+//	public ServletWebServerFactory servletContainer() {
+//		TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
+//			@Override
+//			protected void postProcessContext(Context context) {
+//				SecurityConstraint securityConstraint = new SecurityConstraint();
+//				securityConstraint.setUserConstraint("CONFIDENTIAL");
+//				SecurityCollection collection = new SecurityCollection();
+//				collection.addPattern("/*");
+//				securityConstraint.addCollection(collection);
+//				context.addConstraint(securityConstraint);
+//			}
+//		};
+//		tomcat.addAdditionalTomcatConnectors(redirectConnector());
+//		return tomcat;
+//	}
+//
+//	private Connector redirectConnector() {
+//		Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+//		connector.setScheme("http");
+//		connector.setPort(8080);
+//		connector.setSecure(false);
+//		connector.setRedirectPort(8012);
+//		return connector;
+//	}
 
 
-//		Mail mail = new Mail();
-//		mail.setMailFrom("javabycode@gmail.com");
-//		mail.setMailTo("ekene.amaechi@upperlink.ng");
-//		mail.setMailSubject("Spring Boot - Email with FreeMarker template");
-//		String msg = "<a href=\""  + "\">Follow this link to "  + " your credential</a><br/>" +
-//				" <strong style=\"color:red\">This link expires after ";
-//		mail.setMailContent(msg);
-//
-//
-//		Map<String, Object> model = new HashMap<String, Object>();
-//		model.put("name", "David");
-//		model.put("details",mail.getMailContent());
-//		model.put("location", "Columbus");
-//		model.put("signature", "www.javabycode.com");
-//		mail.setModel(model);
-//
-//		mailService.sendEmail(mail);
-//
-//		System.out.println("Done!");
 
 
-	}
+
 
 
 }

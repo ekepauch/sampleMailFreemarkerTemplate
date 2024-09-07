@@ -42,11 +42,10 @@ public class MailService  {
         Template t = freemarkerConfig.getTemplate("email-template.ftl");
         String text = FreeMarkerTemplateUtils.processTemplateIntoString(t, mail.getModel());
 
-
-
         helper.setTo(mail.getMailTo());
         helper.setText(text, true);
         helper.setSubject(mail.getMailSubject());
+        helper.setFrom("mark");
 
         sender.send(message);
     }
