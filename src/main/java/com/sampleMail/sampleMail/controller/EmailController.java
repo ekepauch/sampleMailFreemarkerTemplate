@@ -2,6 +2,7 @@ package com.sampleMail.sampleMail.controller;
 
 
 import com.sampleMail.sampleMail.model.Mail;
+import com.sampleMail.sampleMail.model.MessageConfigRequest;
 import com.sampleMail.sampleMail.service.MailService;
 import com.sampleMail.sampleMail.settings.Response;
 import com.sampleMail.sampleMail.utility.CustomResponseCode;
@@ -29,12 +30,9 @@ public class EmailController {
 
 
     @RequestMapping(value = "/send", method = RequestMethod.POST)
-    public ResponseEntity<Response> sendEmail(@RequestBody Mail mail) throws Exception {
+    public ResponseEntity<Response> sendEmail(@RequestBody MessageConfigRequest mail) throws Exception {
         HttpStatus httpCode;
         Response resp = new Response();
-        Map<String, Object> model = new HashMap<String, Object>();
-		model.put("details",mail.getDetails());
-        mail.setModel(model);
         mailService.sendEmail(mail);
         resp.setCode(CustomResponseCode.SUCCESS);
         resp.setDescription("Successful");
